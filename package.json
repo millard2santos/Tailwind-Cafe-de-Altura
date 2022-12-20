@@ -1,0 +1,24 @@
+{
+  "name": "tailwind-cafe-de-altura",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/millard2santos/Tailwind-Cafe-de-Altura.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/millard2santos/Tailwind-Cafe-de-Altura/issues"
+  },
+  "homepage": "https://github.com/millard2santos/Tailwind-Cafe-de-Altura#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
