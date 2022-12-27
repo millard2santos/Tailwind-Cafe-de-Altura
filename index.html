@@ -12,7 +12,7 @@
 <body>
 
     <!-- -----------NavBar------------- -->
-    <nav class="flex justify-between items-center bg-darkGrey py-3 px-10 text-taupe">
+    <nav class="flex justify-between items-center bg-darkGrey py-3 px-10 text-white">
         <div class="flex justify-center items-center gap-2">
             <h2 class="text-2xl opacity-80">cafedealtura.com</h2>
             <img src="/assets/icons/cup.png" alt="cup" class="">
@@ -43,15 +43,15 @@
                 granos de café y que puedas
                 viajar desde la comodidad de tu hogar.</p>
             <div class="flex gap-4">
-                <button class="py-3 px-6 rounded shadow-normal bg-black text-white">Descubrir orígenes</button>
-                <button class="py-3 px-6 rounded shadow-normal bg-green text-white">Comprar</button>
+                <button class="py-2 px-6 rounded shadow-normal bg-black text-white">Descubrir orígenes</button>
+                <button class="py-2 px-6 rounded shadow-normal bg-green text-white">Comprar</button>
             </div>
         </article>
         <img src="/assets/other/mainSection.jpg" alt="Main photo" class="shadow-normal">
     </header>
     <!-- -----------Header------------- -->
     <!-- -----------Three Card------------- -->
-    <section class="three-card flex flex-col justify-center gap-6 p-12 bg-darkGrey">
+    <section class="three-card flex flex-col justify-center gap-6 p-12 bg-[url('/assets/other/background-coffe.jpg')]">
         <h4 class="text-center font-medium text-2xl text-white">Café con las mejores condiciones</h4>
         <div class="hold-cards flex gap-6 self-center">
             <article class="card w-[320px] h-[232px] flex flex-col justify-center items-center gap-4 p-6 shadow bg-white rounded-lg">
@@ -74,6 +74,51 @@
         </div>
     </section>
     <!-- -----------Three Card------------- -->
+    <!-- -----------coffes------------- -->
+    <section class="flex flex-col p-10 gap-10 justify-center bg-white" id="news">
+        <h2 class="text-2xl font-medium text-green text-center">Novedades</h2>
+        <div class="flex justify-between flex-wrap gap-6">
+            <article class="flex flex-col items-center gap-6 p-6 border border-grey rounded-lg shadow-md">
+                <img src="assets/coffe/costaRicaBag.png" alt="">
+                <div class="flex flex-col justify-center items-center gap-3 font-semibold text-sm">
+                    <p>Costa Rica Tarrazú</p>
+                    <p class="font-normal">9,00€</p>
+                </div>
+                <button class="p-2 font-semibold rounded bg-green text-sm text-white">Añadir</button>
+            </article>
+            <article class="flex flex-col items-center gap-6 p-6 border border-grey rounded-lg shadow-md">
+                <img src="assets/coffe/colombiaBag.png" alt="">
+                <div class="flex flex-col justify-center items-center gap-3 font-semibold text-sm">
+                    <p>Colombia Los Naranjas</p>
+                    <p class="font-normal">9,00€</p>
+                </div>
+                <button class="p-2 font-semibold rounded bg-green text-sm text-white">Añadir</button>
+            </article>
+            <article class="flex flex-col items-center gap-6 p-6 border border-grey rounded-lg shadow-md">
+                <img src="assets/coffe/laosBag.png" alt="">
+                <div class="flex flex-col justify-center items-center gap-3 font-semibold text-sm">
+                    <p>Laos Amanecer</p>
+                    <p class="font-normal">9,00€</p>
+                </div>
+                <button class="p-2 font-semibold rounded bg-green text-sm text-white">Añadir</button>
+            </article>
+            <article class="flex flex-col items-center gap-6 p-6 border border-grey rounded-lg shadow-md">
+                <img src="assets/coffe/etiopiaBag.png" alt="">
+                <div class="flex flex-col justify-center items-center gap-3 font-semibold text-sm">
+                    <p>Etiopía Yrgacheff</p>
+                    <p class="font-normal">9,00€</p>
+                </div>
+                <button class="p-2 font-semibold rounded bg-green text-sm text-white">Añadir</button>
+            </article>
+        </div>
+        <div class="news-last">
+            <p>Ver todo</p>
+            <img src="/assets/icons/rightArrow.png" alt="">
+        </div>
+    </section>
+    <!-- -----------coffes------------- -->
+    <div class="bg-darkGrey w-50 h-50"></div>
+
 
     <script src="./src/main.js"></script>
 </body>
