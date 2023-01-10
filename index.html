@@ -175,11 +175,11 @@
     <!-- -----------QA------------- -->
     <!-- -----------Location------------- -->
     <section class="location py-11 px-10">
-        <div class="hold-location flex gap-3">
+        <div class="hold-location flex gap-3 justify-between">
             <article class="location-article flex flex-col justify-center gap-4">
                 <h3 class="text-2xl font-medium text-green">Pruébalo en nuestra coffe shop</h3>
                 <p class="text-sm font-semibold">Visita nuestra cafetería en el centro de la ciudad para
-                    probrar los granos de café antes de hacer
+                    probar los granos de café antes de hacer
                     tu pedido y llevate un descuento.</p>
                 <div class="location-last flex justify-center items-center self-start gap-5 mt-1">
                     <a href="">
@@ -225,27 +225,27 @@
                     <div class="form-actual-name flex flex-col gap-1">
                         <label class="text-xs text-grey" for="name">Nombre completo</label>
                         <input type="text" id="name" name="name"
-                            class="py-2 px-4 shadow-sm rounded-md border border-taupe hover:border-greyHoverInput focus:outline-greenFocusInput"
+                            class="w-[470px] py-2 px-4 shadow-sm rounded-md border border-taupe hover:border-greyHoverInput focus:outline-greenFocusInput"
                             required>
                     </div>
                     <div class="form-actual-email flex flex-col gap-1">
                         <label class="text-xs text-grey" for="mail">Email</label>
                         <input type="email" id="mail" name="e-mail"
-                            class="py-2 px-4 shadow-sm rounded-md border border-taupe hover:border-greyHoverInput focus:outline-greenFocusInput"
+                            class="w-[470px] py-2 px-4 shadow-sm rounded-md border border-taupe hover:border-greyHoverInput focus:outline-greenFocusInput"
                             required>
                     </div>
                     <div class="form-actual-tlf flex flex-col gap-1">
                         <label class="text-xs text-grey" for="tlf">Teléfono</label>
-                        <div class="US flex border shadow-sm rounded-md">
+                        <div class="US flex border border-taupe rounded-md hover:border-greyHoverInput">
                             <div class="US-actual p-3 flex justify-center items-center gap-2">US<img
                                     src="/assets/icons/upArrow.png" alt=""></div>
 
-                            <input class=" outline-none border-none" type="tel" id="tlf" name="Phone"
+                            <input class="outline-none border-none w-full" type="tel" id="tlf" name="Phone"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+1 (555) 987-6543">
                         </div>
                     </div>
 
-                    <textarea class="hover-focus outline-none py-2 px-4 shadow-sm rounded-md border border-taupe"
+                    <textarea class="focus:outline-greenFocusInput py-2 px-4 shadow-sm rounded-md border border-taupe hover:border-greyHoverInput"
                         name="comment" id="comment" rows="6" placeholder="¿En qué puedo ayudarte?"></textarea>
                     <div class="flex items-center gap-3" id="form-check">
                         <input type="checkbox" name="Accept" id="condition"
@@ -256,7 +256,7 @@
                             y los <span class="condition-span underline font-semibold">Términos y
                                 condiciones.</span></label>
                     </div>
-                    <input class="bg-green py-3 px-6 rounded w-22 text-white border-none font-semibold" type="submit"
+                    <input class="bg-green py-3 px-6 rounded w-[90px] text-white border-none font-semibold" type="submit"
                         name="" id="" value="Enviar">
                 </form>
             </article>
@@ -269,7 +269,7 @@
             <h2 class="text-2xl ">cafedealtura.com</h2>
             <img src="/assets/icons/cup.png" alt="cup" class="coffe-cup">
         </div>
-        <div class="flex mb-4 justify-between">
+        <div class="flex mb-4 gap-[570px]">
             <div class="">
                 <p id="size18" class="text-lg mb-5">Te ayudamos en</p>
                 <button class="flex items-center py-4 px-6 gap-2.5 bg-grey text-white rounded border-none mb-5">
@@ -303,19 +303,7 @@
         <p>Todos los derechos reservados - Café de Altura SL - 2022</p>
     </section>
 
-    <div class="bg-black">
-       <div class="">
-                <p id="size18" class="text-lg">Te ayudamos en</p>
-                <button class="flex items-center py-4 px-6 gap-2.5 bg-grey text-white rounded border-none">
-                    <img src="assets/icons/wPhone.png" alt="">
-                    +34 919 49 05 18
-                </button>
-                <button class="flex items-center py-4 px-6 gap-2.5 bg-grey text-white rounded border-none">
-                    <img src="assets/icons/whiteMail.png" alt="" id="mail-img">
-                    hola@cafedealtura.com
-                </button>
-            </div>
-    </div>
+    
     <script src="./src/main.js"></script>
 </body>
 
