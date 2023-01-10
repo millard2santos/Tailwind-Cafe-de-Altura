@@ -37,7 +37,7 @@
     </nav>
     <!-- -----------NavBar------------- -->
     <!-- -----------Header------------- -->
-    <header class="flex gap-6 py-12 px-10 bg-taupe font-semibold">
+    <header class="flex gap-6 py-12 px-10 font-semibold">
         <article class="head-article flex flex-col justify-center gap-4">
             <h3 class="text-lg text-green">De la planta a tu taza</h3>
             <h1 class="text-[40px]">El mejor café del mundo, ahora en tu casa.</h1>
@@ -49,7 +49,7 @@
                 <button class="py-2 px-6 rounded shadow-normal bg-green text-white">Comprar</button>
             </div>
         </article>
-        <img src="/assets/other/mainSection.jpg" alt="Main photo" class="shadow-normal">
+        <img src="/assets/other/mainSection.jpg" alt="Main photo" class="rounded-3xl shadow-normal">
     </header>
     <!-- -----------Header------------- -->
     <!-- -----------Three Card------------- -->
@@ -82,40 +82,48 @@
     </section>
     <!-- -----------Three Card------------- -->
     <!-- -----------coffes------------- -->
-    <section class="flex flex-col p-10 gap-10 justify-center bg-white" id="news">
+    <section class="flex flex-col p-10 gap-10 justify-center " id="news">
         <h2 class="text-2xl font-medium text-green text-center">Novedades</h2>
-        <div class="flex justify-between flex-wrap gap-6">
-            <article class="flex flex-col items-center gap-6 p-6 rounded-lg shadow-md">
+        <div class="flex justify-between items-center flex-wrap gap-6">
+            <article
+                class="group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe">
                 <img src="assets/coffe/costaRicaBag.png" alt="">
                 <div class="flex flex-col justify-center items-center gap-3 font-semibold text-sm">
                     <p>Costa Rica Tarrazú</p>
                     <p class="font-normal">9,00€</p>
                 </div>
-                <button class="p-2 font-semibold rounded bg-green text-sm text-white">Añadir</button>
+                <button
+                    class=" p-2 font-semibold rounded bg-green opacity-70 group-hover:opacity-100 text-sm text-white">Añadir</button>
             </article>
-            <article class="flex flex-col items-center gap-6 p-6 rounded-lg shadow-md">
+            <article
+                class="group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe">
                 <img src="assets/coffe/colombiaBag.png" alt="">
                 <div class="flex flex-col justify-center items-center gap-3 font-semibold text-sm">
                     <p>Colombia Los Naranjas</p>
                     <p class="font-normal">9,00€</p>
                 </div>
-                <button class="p-2 font-semibold rounded bg-green text-sm text-white">Añadir</button>
+                <button
+                    class=" p-2 font-semibold rounded bg-green opacity-70 group-hover:opacity-100 text-sm text-white">Añadir</button>
             </article>
-            <article class="flex flex-col items-center gap-6 p-6 rounded-lg shadow-md">
+            <article
+                class="group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe">
                 <img src="assets/coffe/laosBag.png" alt="">
                 <div class="flex flex-col justify-center items-center gap-3 font-semibold text-sm">
                     <p>Laos Amanecer</p>
                     <p class="font-normal">9,00€</p>
                 </div>
-                <button class="p-2 font-semibold rounded bg-green text-sm text-white">Añadir</button>
+                <button
+                    class=" p-2 font-semibold rounded bg-green opacity-70 group-hover:opacity-100 text-sm text-white">Añadir</button>
             </article>
-            <article class="flex flex-col items-center gap-6 p-6 rounded-lg shadow-md ">
+            <article
+                class="group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe">
                 <img src="assets/coffe/etiopiaBag.png" alt="">
                 <div class="flex flex-col justify-center items-center gap-3 font-semibold text-sm">
                     <p>Etiopía Yrgacheff</p>
                     <p class="font-normal">9,00€</p>
                 </div>
-                <button class="p-2 font-semibold rounded bg-green text-sm text-white">Añadir</button>
+                <button
+                    class=" p-2 font-semibold rounded bg-green opacity-70 group-hover:opacity-100 text-sm text-white">Añadir</button>
             </article>
         </div>
         <div class="flex justify-center items-center gap-5 font-semibold underline">
@@ -128,23 +136,23 @@
     <section class="qa bg-green py-12 px-[306px]">
         <div class="hold-qa flex flex-col justify-center items-center gap-4 text-white">
             <h2 class="font-semibold mb-8 text-2xl">Preguntas frecuentes</h2>
-            <div class="qa-div flex flex-col justify-center gap-4 p-6 bg-white rounded-[10px] text-darkGrey">
+            <div class="qa-div flex flex-col justify-center gap-4 p-6 bg-white rounded-[10px] text-darkGrey w-full">
                 <div class="qa-div-click flex justify-between items-center">
                     <p class="text-lg font-semibold">¿Cómo hago el pedido?</p>
                     <img src="/assets/icons/upArrow.png" alt="">
                 </div>
-                <hr class="border bg-grey">
+                <div class="w-full h-px bg-grey opacity-30"></div>
                 <p class="text-xs">Selecciona el café que desees probar y completa el proceso de compra. Si lo
                     prefieres, te
                     preguntaremos cada cuanto quieres que te lo mandemos a casa y asi nunca te quedarás sin café.
                 </p>
             </div>
-            <div class="qa-div flex flex-col justify-center gap-4 p-6 bg-white rounded-[10px] text-darkGrey">
+            <div class="qa-div flex flex-col justify-center gap-4 p-6 bg-white rounded-[10px] text-darkGrey w-full">
                 <div class="qa-div-click flex justify-between items-center">
                     <p class="text-lg font-semibold">¿Por qué los precios son tan bajos?</p>
                     <img src="/assets/icons/upArrow.png" alt="">
                 </div>
-                <hr class="border bg-grey">
+                <div class="w-full h-px bg-grey opacity-30"></div>
                 <p class="text-xs">Viajamos constantemente para encontrar los mejores granos y a los agricultores más
                     exigentes. Si
                     podemos ofrecerte estos precios es porque tratamos directamente con los productores de café, sin
@@ -152,7 +160,7 @@
                     de
                     café recibe el mayor beneficio posible. </p>
             </div>
-            <div class="qa-div flex flex-col justify-center gap-4 p-6 bg-white rounded-[10px] text-darkGrey">
+            <div class="qa-div flex flex-col justify-center gap-4 p-6 bg-white rounded-[10px] text-darkGrey w-full">
                 <div class="qa-div-click flex justify-between items-center">
                     <p class="text-lg font-semibold">¿Es posible enviar café a mi oficina?</p>
                     <img src="/assets/icons/upArrow.png" alt="" class="">
@@ -169,12 +177,14 @@
     <section class="location py-11 px-10">
         <div class="hold-location flex gap-3">
             <article class="location-article flex flex-col justify-center gap-4">
-                <h3 class="text-2xl font-medium">Pruébalo en nuestra coffe shop</h3>
-                <p class="text-sm font-semibold underline">Visita nuestra cafetería en el centro de la ciudad para
+                <h3 class="text-2xl font-medium text-green">Pruébalo en nuestra coffe shop</h3>
+                <p class="text-sm font-semibold">Visita nuestra cafetería en el centro de la ciudad para
                     probrar los granos de café antes de hacer
                     tu pedido y llevate un descuento.</p>
                 <div class="location-last flex justify-center items-center self-start gap-5 mt-1">
-                    <p>Cómo llegar</p>
+                    <a href="">
+                        <p class="underline">Cómo llegar</p>
+                    </a>
                     <img src="/assets/icons/rightArrow.png" alt="">
                 </div>
             </article>
@@ -184,7 +194,7 @@
     <!-- -----------Location------------- -->
     <!-- -----------FORM------------- -->
     <section class="form bg-taupe px-10">
-        <div class="hold-form flex gap-6">
+        <div class="hold-form flex justify-between gap-6">
             <article class="form-txt flex flex-col justify-center items-start gap-5 text-grey ">
                 <h4 class="text-black text-lg font-semibold">Entra en contacto con nosotros</h4>
                 <p>Si tienes dudas, ponte en contacto con nostros a través del formulario y te responderemos lo
@@ -210,24 +220,27 @@
                     <p class="text-black font-semibold underline">Ver nuestras ofertas</p>
                 </div>
             </article>
-            <article class="form-actual bg-white py-8 px-13">
+            <article class="py-8 pl-16 pr-[51px] bg-white">
                 <form action="" class="flex flex-col gap-6">
                     <div class="form-actual-name flex flex-col gap-1">
                         <label class="text-xs text-grey" for="name">Nombre completo</label>
-                        <input class="hover-focus" type="text" id="name" name="name"
-                            class=" outline-none py-2 px-4 shadow-sm rounded-md border border-taupe" required>
+                        <input type="text" id="name" name="name"
+                            class="py-2 px-4 shadow-sm rounded-md border border-taupe hover:border-greyHoverInput focus:outline-greenFocusInput"
+                            required>
                     </div>
                     <div class="form-actual-email flex flex-col gap-1">
                         <label class="text-xs text-grey" for="mail">Email</label>
-                        <input class="hover-focus" type="email" id="mail" name="e-mail"
-                            class=" outline-none py-2 px-4 shadow-sm rounded-md border border-taupe" required>
+                        <input type="email" id="mail" name="e-mail"
+                            class="py-2 px-4 shadow-sm rounded-md border border-taupe hover:border-greyHoverInput focus:outline-greenFocusInput"
+                            required>
                     </div>
                     <div class="form-actual-tlf flex flex-col gap-1">
                         <label class="text-xs text-grey" for="tlf">Teléfono</label>
                         <div class="US flex border shadow-sm rounded-md">
-                            <div class="US-actual p-3 flex justify-center items-center gap-2">US <img
+                            <div class="US-actual p-3 flex justify-center items-center gap-2">US<img
                                     src="/assets/icons/upArrow.png" alt=""></div>
-                            <input class="outline-none border-none" type="tel" id="tlf" name="Phone"
+
+                            <input class=" outline-none border-none" type="tel" id="tlf" name="Phone"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+1 (555) 987-6543">
                         </div>
                     </div>
@@ -251,26 +264,24 @@
     </section>
     <!-- -----------FORM------------- -->
     <!-- -----------FOOTER------------- -->
-    <footer class="flex flex-col bg-black text-white pt-7 px-10">
+    <footer class="flex flex-col bg-black text-white py-7 px-10">
         <div class="footer-1 flex justify-start items-center gap-2 mb-2.5 text-white">
             <h2 class="text-2xl ">cafedealtura.com</h2>
             <img src="/assets/icons/cup.png" alt="cup" class="coffe-cup">
         </div>
-        <div class="hold-footer flex mb-10 ">
-            <div class="footer-address flex flex-col gap-5">
-                <p id="size18" class="text-lg">Te ayudamos en</p>
-                <button
-                    class="footer-address-actual flex justify-center items-center p-4 gap-2.5 bg-grey text-white rounded border-none">
+        <div class="flex mb-4 justify-between">
+            <div class="">
+                <p id="size18" class="text-lg mb-5">Te ayudamos en</p>
+                <button class="flex items-center py-4 px-6 gap-2.5 bg-grey text-white rounded border-none mb-5">
                     <img src="assets/icons/wPhone.png" alt="">
                     +34 919 49 05 18
                 </button>
-                <button
-                    class="footer-address-actual flex justify-center items-center p-4 gap-2.5 bg-grey text-white rounded border-none">
+                <button class="flex items-center py-4 px-6 gap-2.5 bg-grey text-white rounded border-none ">
                     <img src="assets/icons/whiteMail.png" alt="" id="mail-img">
                     hola@cafedealtura.com
                 </button>
             </div>
-            <div class="footer-link flex gap-[118px] justify-center">
+            <div class="footer-link flex gap-[118px] justify-between">
                 <div class="footer-link-actual flex flex-col gap-4">
                     <a href="" class="font-semibold text-sm">Tienda</a>
                     <a href="" class="font-semibold text-sm">Suscripción</a>
@@ -279,19 +290,32 @@
                     <a href="" class="font-semibold text-sm">Contacto</a>
 
                 </div>
-                <div class="footer-link-actual">
-                    <p>Política de privacidad</p>
-                    <p>Política de cookies</p>
-                    <p>Términos y condiciones</p>
+                <div class="footer-link-actual flex flex-col gap-4">
+                    <a href="">Política de privacidad</a>
+                    <a href="">Política de cookies</a>
+                    <a href="">Términos y condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
     <!-- -----------FOOTER------------- -->
-    <section class="footer-last flex justify-center font-semibold bg-black text-white">
+    <section class="footer-last flex justify-center font-semibold bg-darkGrey py-3 text-white">
         <p>Todos los derechos reservados - Café de Altura SL - 2022</p>
     </section>
 
+    <div class="bg-black">
+       <div class="">
+                <p id="size18" class="text-lg">Te ayudamos en</p>
+                <button class="flex items-center py-4 px-6 gap-2.5 bg-grey text-white rounded border-none">
+                    <img src="assets/icons/wPhone.png" alt="">
+                    +34 919 49 05 18
+                </button>
+                <button class="flex items-center py-4 px-6 gap-2.5 bg-grey text-white rounded border-none">
+                    <img src="assets/icons/whiteMail.png" alt="" id="mail-img">
+                    hola@cafedealtura.com
+                </button>
+            </div>
+    </div>
     <script src="./src/main.js"></script>
 </body>
 

@@ -545,6 +545,18 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -557,6 +569,18 @@ video {
   height: 232px;
 }
 
+.h-px {
+  height: 1px;
+}
+
+.h-\[1000px\] {
+  height: 1000px;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -567,6 +591,22 @@ video {
 
 .w-\[316px\] {
   width: 316px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[1000px\] {
+  width: 1000px;
+}
+
+.w-\[100px\] {
+  width: 100px;
 }
 
 .flex-col {
@@ -669,6 +709,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -694,6 +738,11 @@ video {
   border-color: rgb(227 222 215 / var(--tw-border-opacity));
 }
 
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(31 24 21 / var(--tw-border-opacity));
+}
+
 .bg-darkGrey {
   --tw-bg-opacity: 1;
   background-color: rgb(43 42 43 / var(--tw-bg-opacity));
@@ -702,11 +751,6 @@ video {
 .bg-grey {
   --tw-bg-opacity: 1;
   background-color: rgb(81 80 81 / var(--tw-bg-opacity));
-}
-
-.bg-taupe {
-  --tw-bg-opacity: 1;
-  background-color: rgb(227 222 215 / var(--tw-bg-opacity));
 }
 
 .bg-black {
@@ -722,6 +766,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-taupe {
+  --tw-bg-opacity: 1;
+  background-color: rgb(227 222 215 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/assets\/other\/background-coffe\.jpg\'\)\] {
@@ -795,6 +844,24 @@ video {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.pl-16 {
+  padding-left: 4rem;
+}
+
+.pr-\[51px\] {
+  padding-right: 51px;
 }
 
 .pt-7 {
@@ -878,6 +945,14 @@ video {
   opacity: 0.8;
 }
 
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
 .shadow-normal {
   --tw-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
   --tw-shadow-colored: 0px 5px 5px var(--tw-shadow-color);
@@ -907,6 +982,51 @@ video {
   outline-offset: 2px;
 }
 
+.outline-greyInput {
+  outline-color: #D1D5DB;
+}
+
+.outline-black {
+  outline-color: #1F1815;
+}
+
+.outline-greenFocusInput {
+  outline-color: #3F8F6B;
+}
+
 .coffe {
   display: flex;
+}
+
+.three-card {
+  background-image: url(../assets/other/background-coffe.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.hover\:border-greyHoverInput:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(155 158 163 / var(--tw-border-opacity));
+}
+
+.hover\:bg-taupe:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(227 222 215 / var(--tw-bg-opacity));
+}
+
+.hover\:outline-greyHoverInput:hover {
+  outline-color: #9B9EA3;
+}
+
+.focus\:border-greenFocusInput:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(63 143 107 / var(--tw-border-opacity));
+}
+
+.focus\:outline-greenFocusInput:focus {
+  outline-color: #3F8F6B;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
 }

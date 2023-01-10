@@ -8,7 +8,11 @@ module.exports = {
       darkGrey: '#2B2A2B',
       black: '#1F1815',
       taupe: '#E3DED7',
-      green: '#2A5B45'
+      green: '#2A5B45',
+      offWhite: '#F7F5F3',
+      greyInput: '#D1D5DB',
+      greyHoverInput: '#9B9EA3',
+      greenFocusInput: '#3F8F6B'
     },
     extend: {
       boxShadow:{

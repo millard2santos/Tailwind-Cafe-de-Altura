@@ -5,3 +5,9 @@
 .coffe {
     display: flex;
 }
+
+.three-card {
+    background-image: url(../assets/other/background-coffe.jpg);
+    background-size: cover;
+    background-position: center center;
+}
