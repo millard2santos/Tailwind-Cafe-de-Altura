@@ -1,6 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+*{
+    font-family: 'Outfit', sans-serif;
+}
+
+.minus{
+    width: 50px;
+    height: 1px;
+    background-color: black;
+
+}
+
+.img{
+    width: 24px;
+    height: 24px;
+}
+.as{
+    padding: 0px 48px
+}
 
 .coffe {
     display: flex;

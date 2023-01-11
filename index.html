@@ -6,7 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe de Altura</title>
-    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/src/input.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: '#FFF',
+                        grey: '#515051',
+                        darkGrey: '#2B2A2B',
+                        black: '#1F1815',
+                        taupe: '#E3DED7',
+                        green: '#2A5B45',
+                        offWhite: '#F7F5F3',
+                        greyInput: '#D1D5DB',
+                        greyHoverInput: '#9B9EA3',
+                        greenFocusInput: '#3F8F6B',
+                        greenCounter: 'hsla(153, 37%, 26%, 0.1)'
+                    },
+                    boxShadow: {
+                        normal: '0px 5px 5px rgba(0, 0, 0, 0.25)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;500;600&display=swap" rel="stylesheet">
@@ -245,7 +273,8 @@
                         </div>
                     </div>
 
-                    <textarea class="focus:outline-greenFocusInput py-2 px-4 shadow-sm rounded-md border border-taupe hover:border-greyHoverInput"
+                    <textarea
+                        class="focus:outline-greenFocusInput py-2 px-4 shadow-sm rounded-md border border-taupe hover:border-greyHoverInput"
                         name="comment" id="comment" rows="6" placeholder="¿En qué puedo ayudarte?"></textarea>
                     <div class="flex items-center gap-3" id="form-check">
                         <input type="checkbox" name="Accept" id="condition"
@@ -256,8 +285,8 @@
                             y los <span class="condition-span underline font-semibold">Términos y
                                 condiciones.</span></label>
                     </div>
-                    <input class="bg-green py-3 px-6 rounded w-[90px] text-white border-none font-semibold" type="submit"
-                        name="" id="" value="Enviar">
+                    <input class="bg-green py-3 px-6 rounded w-[90px] text-white border-none font-semibold"
+                        type="submit" name="" id="" value="Enviar">
                 </form>
             </article>
         </div>
@@ -298,12 +327,12 @@
             </div>
         </div>
     </footer>
-    <!-- -----------FOOTER------------- -->
     <section class="footer-last flex justify-center font-semibold bg-darkGrey py-3 text-white">
         <p>Todos los derechos reservados - Café de Altura SL - 2022</p>
     </section>
+    <!-- -----------FOOTER------------- -->
 
-    
+
     <script src="./src/main.js"></script>
 </body>
 

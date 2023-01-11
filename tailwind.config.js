@@ -12,7 +12,8 @@ module.exports = {
       offWhite: '#F7F5F3',
       greyInput: '#D1D5DB',
       greyHoverInput: '#9B9EA3',
-      greenFocusInput: '#3F8F6B'
+      greenFocusInput: '#3F8F6B',
+      greenCounter: 'hsla(153, 37%, 26%, 0.1)'
     },
     extend: {
       boxShadow:{

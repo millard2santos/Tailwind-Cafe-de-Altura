@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe de Altura | Carrito</title>
+    <link rel="stylesheet" href="../src/input.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: '#FFF',
+                        grey: '#515051',
+                        darkGrey: '#2B2A2B',
+                        black: '#1F1815',
+                        taupe: '#E3DED7',
+                        green: '#2A5B45',
+                        offWhite: '#F7F5F3',
+                        greyInput: '#D1D5DB',
+                        greyHoverInput: '#9B9EA3',
+                        greenFocusInput: '#3F8F6B',
+                        greenCounter: 'hsla(153, 37%, 26%, 0.1)'
+                    },
+                    boxShadow: {
+                        normal: '0px 5px 5px rgba(0, 0, 0, 0.25)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- -----------------NAVBAR-------------- -->
+    <nav class="flex justify-between items-center bg-darkGrey py-3 px-10 text-white">
+        <div class="flex justify-center items-center gap-2">
+            <h2 class="text-2xl opacity-80">cafedealtura.com</h2>
+            <img src="/assets/icons/cup.png" alt="cup" class="">
+        </div>
+        <div class="nav-link flex justify-between gap-8">
+            <a class="font-semibold text-sm" href="/pages/store.html">Tienda</a>
+            <a class="font-semibold text-sm" href="">Suscripción</a>
+            <a class="font-semibold text-sm" href="">Para empresas</a>
+            <a class="font-semibold text-sm" href="">Sobre nosotros</a>
+            <a class="font-semibold text-sm" href="">Contacto</a>
+        </div>
+        <div class="flex justify-evenly items-center gap-6">
+            <div class="flex justify-evenly items-center gap-3">
+                <img src="/assets/icons/wPhone.png" alt="white phone" class="w-4.5 h-4.5">
+                <a href="">+34 919 49 05 18</a>
+            </div>
+            <button class="py-3 px-6 bg-grey rounded-[5px]">Iniciar sesión</button>
+        </div>
+        <img src="/assets/icons/bolsa.png" alt="">
+    </nav>
+    <!-- -----------------NAVBAR-------------- -->
+    <!-- -----------------CART-------------- -->
+    <section class="px-12 flex flex-col gap-8">
+        <h2 class="text-center text-green font-medium text-2xl mt-10">Cesta(<span>0</span>)</h2>
+        <div class="container flex justify-between">
+            <div class="flex flex-col w-full px-6">
+                <div class="flex flex-col gap-6">
+                    <p class="font-semibold text-lg">Productos</p>
+                    <div class="flex flex-col gap-6">
+                        <div class="flex justify-between items-center gap-6">
+                            <div class="flex gap-7">
+                                <div class="flex gap-3.5 items-center">
+                                    <img src="/assets/icons/minus.png" alt="" class="w-3 ">
+                                    <div
+                                        class="w-6 h-6 flex justify-center items-center bg-greenCounter rounded-full text-xs text-green">
+                                        1</div>
+                                    <img src="/assets/icons/plus.png" alt="" class="w-3 h-3">
+                                </div>
+                                <img src="/assets/coffe/colombiaBag.png" alt="" class="w-[55px] h-[55px]">
+                                <div class="flex flex-col justify-center">
+                                    <p class="font-semibold text-sm">Colombia Los Naranjos</p>
+                                    <p class="text-sm">Paquete de café, 250gr</p>
+                                </div>
+                            </div>
+                            <p class="font-semibold text-lg">9,00€</p>
+                        </div>
+                        <div class="w-full h-px bg-grey opacity-10"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <p class="font-semibold text-lg">Seleccionar envio</p>
+                    <div class="flex items-center gap-6">
+                        <input class="accent-green w-3.5 h-3.5" type="radio" id="free" name="envio">
+                        <label for="free">
+                            <div class="flex flex-col gap-1">
+                                <p class="font-semibold text-sm">Envio 5-7 dias</p>
+                                <p class="text-sm">Opción estándar sin seguimiento</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="w-full h-px bg-grey opacity-10"></div>
+                    <div class="flex items-center gap-6">
+                        <input class="accent-green w-3.5 h-3.5" type="radio" id="payment" name="envio">
+                        <label for="payment">
+                            <div class="flex flex-col gap-1">
+                                <p class="font-semibold text-sm">Envío urgente 24h</p>
+                                <p class="text-sm">Recibe tu pedido en las siguientes 24h (Para pedidos realizados antes
+                                    de
+                                    las 13:00).</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class=" bg-offWhite flex flex-col gap-4 p-6 self-start">
+                <p class="text-lg font-semibold">Total del carrito</p>
+                <div class="w-full h-px bg-grey opacity-10"></div>
+                <div class="flex justify-between items-center">
+                    <p class="text-sm">SUBTOTAL</p>
+                    <p class="text-sm font-semibold">18,00€</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-sm">ENVÍO</p>
+                    <p class="text-sm font-semibold">GRATIS</p>
+                </div>
+                <div class="w-[336px] h-px bg-grey opacity-10"></div>
+                <div class="flex justify-between items-center">
+                    <p class="text-sm font-semibold">TOTAL</p>
+                    <p class="text-sm font-semibold">18,00€</p>
+                </div>
+                <p class="self-end text-xs text-grey">Incluye 3,78€ de IVA</p>
+                <div class="flex justify-center items-center gap-10">
+                    <button class=" bg-green text-white py-3 px-6 rounded text-sm font-semibold ">Ir a checkout</button>
+                    <a href="cart.html" class="text-green font-semibold text-sm ">Seguir comprando</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../src/cart.js"></script>
+    <!-- -----------------CART-------------- -->
+
+</body>
+
+</html>
