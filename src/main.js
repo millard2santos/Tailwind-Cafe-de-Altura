@@ -1,6 +1,11 @@
 const coffes = document.querySelectorAll('.coffe')
 const qa = document.querySelectorAll('.qa-div')
-let cart = []
+let cart;
+if (JSON.parse(localStorage.getItem('cart'))) {
+    cart = JSON.parse(localStorage.getItem('cart'))
+}else{
+    cart = []
+}
 
 coffes.forEach(elements => {
     const coffe = {
