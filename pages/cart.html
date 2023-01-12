@@ -43,10 +43,10 @@
 <body>
     <!-- -----------------NAVBAR-------------- -->
     <nav class="flex justify-between items-center bg-darkGrey py-3 px-10 text-white">
-        <div class="flex justify-center items-center gap-2">
+        <a href="../index.html"><div class="flex justify-center items-center gap-2">
             <h2 class="text-2xl opacity-80">cafedealtura.com</h2>
             <img src="/assets/icons/cup.png" alt="cup" class="">
-        </div>
+        </div></a>
         <div class="nav-link flex justify-between gap-8">
             <a class="font-semibold text-sm" href="/pages/store.html">Tienda</a>
             <a class="font-semibold text-sm" href="">Suscripción</a>
@@ -61,11 +61,16 @@
             </div>
             <button class="py-3 px-6 bg-grey rounded-[5px]">Iniciar sesión</button>
         </div>
-        <img src="/assets/icons/bolsa.png" alt="">
+        <a href="cart.html">
+            <div class="flex items-center gap-2">
+                <img src="/assets/icons/bolsa.png" alt="" class="w-6 h-6">
+                <div id="counterTop" class="w-6 h-6 rounded-full flex justify-center items-center bg-grey text-xs">0</div>
+            </div>
+        </a>
     </nav>
     <!-- -----------------NAVBAR-------------- -->
     <!-- -----------------CART-------------- -->
-    <section class="px-12 flex flex-col gap-8">
+    <section class="px-12 flex flex-col gap-8 min-h-[90vh] mb-40">
         <h2 class="text-center text-green font-medium text-2xl mt-10">Cesta(<span id="counter">0</span>)</h2>
         <div class="container flex justify-between">
             <div class="flex flex-col w-full px-6">
@@ -99,7 +104,7 @@
                     <p class="font-semibold text-lg">Seleccionar envio</p>
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-6">
-                            <input class="accent-green w-3.5 h-3.5 envio" type="radio" id="free" name="envio" value="0">
+                            <input class="accent-green w-3.5 h-3.5 envio" type="radio" id="free" name="envio" value="0" checked>
                             <label for="free">
                                 <div class="flex flex-col gap-1">
                                     <p class="font-semibold text-sm">Envio 5-7 dias</p>
@@ -132,27 +137,30 @@
                 <div class="w-full h-px bg-grey opacity-10"></div>
                 <div class="flex justify-between items-center">
                     <p class="text-sm">SUBTOTAL</p>
-                    <p class="text-sm font-semibold" id="subtotal"></p>
+                    <p class="text-sm font-semibold" ><span id="subtotal">0</span>,00€</p>
                 </div>
                 <div class="flex justify-between items-center">
                     <p class="text-sm">ENVÍO</p>
-                    <p class="text-sm font-semibold" id="envio"></p>
+                    <p class="text-sm font-semibold" id="envio">GRATIS</p>
                 </div>
                 <div class="w-[336px] h-px bg-grey opacity-10"></div>
                 <div class="flex justify-between items-center">
                     <p class="text-sm font-semibold">TOTAL</p>
-                    <p class="text-sm font-semibold" id="total"></p>
+                    <p class="text-sm font-semibold" ><span id="total">0</span>,00€</p>
                 </div>
                 <p class="self-end text-xs text-grey">Incluye 3,78€ de IVA</p>
                 <div class="flex justify-center items-center gap-10">
                     <button class=" bg-green text-white py-3 px-6 rounded text-sm font-semibold ">Ir a checkout</button>
-                    <a href="cart.html" class="text-green font-semibold text-sm ">Seguir comprando</a>
+                    <a href="store.html" class="text-green font-semibold text-sm ">Seguir comprando</a>
                 </div>
             </div>
         </div>
     </section>
     <script src="../src/cart.js"></script>
     <!-- -----------------CART-------------- -->
+    <section class="footer-last flex justify-center font-semibold bg-darkGrey py-3 text-white">
+        <p>Todos los derechos reservados - Café de Altura SL - 2022</p>
+    </section>
 
 </body>
 

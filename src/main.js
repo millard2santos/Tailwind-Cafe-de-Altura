@@ -1,8 +1,11 @@
 const coffes = document.querySelectorAll('.coffe')
-console.log(coffes[0].children[1].children[1].children[0].innerText);
+const counterTop = document.querySelector('#counterTop')
+
+
 const qa = document.querySelectorAll('.qa-div')
 let cart;
 if (JSON.parse(localStorage.getItem('cart'))) {
+    counterTop.innerText = JSON.parse(localStorage.getItem('cart')).length
     cart = JSON.parse(localStorage.getItem('cart'))
 }else{
     cart = []
@@ -18,6 +21,8 @@ coffes.forEach(elements => {
     elements.children[2].addEventListener('click', () => {
         cart.push(coffe)
         localStorage.setItem('cart', JSON.stringify(cart))
+        counterTop.innerText = JSON.parse(localStorage.getItem('cart')).length
+        
     })
 })
 

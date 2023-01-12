@@ -24,7 +24,7 @@
                         greyHoverInput: '#9B9EA3',
                         greenFocusInput: '#3F8F6B',
                         greenCounter: 'hsla(153, 37%, 26%, 0.1)'
-                        
+
                     },
                     boxShadow: {
                         normal: '0px 5px 5px rgba(0, 0, 0, 0.25)',
@@ -34,7 +34,7 @@
         }
     </script>
     <style type="text/tailwindcss">
-        
+
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,10 +44,12 @@
 <body>
     <!-- -----------------NAVBAR-------------- -->
     <nav class="flex justify-between items-center bg-darkGrey py-3 px-10 text-white">
-        <div class="flex justify-center items-center gap-2">
-            <h2 class="text-2xl opacity-80">cafedealtura.com</h2>
-            <img src="/assets/icons/cup.png" alt="cup" class="">
-        </div>
+        <a href="../index.html">
+            <div class="flex justify-center items-center gap-2">
+                <h2 class="text-2xl opacity-80">cafedealtura.com</h2>
+                <img src="/assets/icons/cup.png" alt="cup" class="">
+            </div>
+        </a>
         <div class="nav-link flex justify-between gap-8">
             <a class="font-semibold text-sm" href="/pages/store.html">Tienda</a>
             <a class="font-semibold text-sm" href="">Suscripción</a>
@@ -62,7 +64,12 @@
             </div>
             <button class="py-3 px-6 bg-grey rounded-[5px]">Iniciar sesión</button>
         </div>
-        <img src="/assets/icons/bolsa.png" alt="">
+        <a href="cart.html">
+            <div class="flex items-center gap-2">
+                <img src="/assets/icons/bolsa.png" alt="" class="w-6 h-6">
+                <div id="counterTop" class="w-6 h-6 rounded-full flex justify-center items-center bg-grey text-xs">0</div>
+            </div>
+        </a>
     </nav>
     <!-- -----------------NAVBAR-------------- -->
     <!-- -----------------COFFES-------------- -->
