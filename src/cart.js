@@ -6,16 +6,23 @@ const envio = document.getElementById('envio')
 const total = document.getElementById('total')
 const inputEnvio = document.querySelectorAll('.envio')
 const counterTop = document.querySelector('#counterTop')
+const envioDiv = document.querySelector('#envioDiv')
 
 // quantity
-
-const change = ({quantity,price}) => {
-    counter.innerText = JSON.parse(localStorage.getItem('cart')).length
+const change = (div,{quantity,price}) => {
+    counter.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc, e) => acc + e.quantity, 0)
+    if (container.children.length <= 1 || cart.length < 0) {
+        empty.classList.remove('hidden')
+        counterTop.classList.add('hidden')
+        counter.parentNode.innerText = 'Cesta'
+        envioDiv.remove()
+   }
     counterTop.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc, e) => acc + e.quantity, 0)
 
     subtotal.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc,e) =>  acc + Number(e.price)*Number(e.quantity), 0)
     total.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc,e) =>  acc + Number(e.price)*Number(e.quantity), 0)
 
+    div.children[1].innerText = `${quantity * price} ,00€`
 }
 
 
@@ -34,8 +41,8 @@ if (JSON.parse(localStorage.getItem('cart'))) {
     //     cartFilteredLength.push(cart.filter((x) => x.name === e.name).length);
     // })
 
-    envio.innerText = 'GRATIS'
-    counter.innerText = cart.length
+    envio.innerText = '0,00€'
+    counter.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc, e) => acc + e.quantity, 0)
 
     cart.forEach((element, i) => {
         const div = document.createElement('div')
@@ -69,20 +76,26 @@ if (JSON.parse(localStorage.getItem('cart'))) {
             element.quantity--
             div.children[0].children[0].children[1].innerText = element.quantity
             if (element.quantity == 0) {
-                cart.splice(i,1)
+                cart.splice(cart.findIndex(e=> e.name === element.name),1)
                 div.remove()
                 localStorage.setItem('cart', JSON.stringify(cart))
 
-                if (container.children.length <= 1 || cart.length < 0) {
-                     empty.classList.remove('hidden')
-                }
+                // if (container.children.length <= 1 || cart.length < 0) {
+                //      empty.classList.remove('hidden')
+                //      counterTop.classList.add('hidden')
+                     
+                // }
             } else {
                 // cart.splice(cart.findIndex(e => e.name === element.name),1)
                 // localStorage.setItem('cart', JSON.stringify(cart))
                 
                 localStorage.setItem('cart', JSON.stringify(cart))
             }
-            change(element)
+            change(div,element)
+            
+
+
+
         })
 
         // IMG MORE
@@ -90,7 +103,7 @@ if (JSON.parse(localStorage.getItem('cart'))) {
             element.quantity++
             localStorage.setItem('cart', JSON.stringify(cart))
             div.children[0].children[0].children[2].previousElementSibling.innerText++
-            change(element)
+            change(div,element)
         })
 
 
@@ -102,9 +115,10 @@ if (JSON.parse(localStorage.getItem('cart'))) {
     });
 
     inputEnvio.forEach(e => {
+        
         e.addEventListener('click', (event) => {
-            event.target.value != '0' ? envio.innerText = event.target.value + ',00€' : envio.innerText = 'GRATIS'
-            total.innerText = Number(total.innerText) + Number(e.value)
+            envio.innerText = Number(e.value) + ',00€'
+            total.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc,e) =>  acc + Number(e.price)*Number(e.quantity), 0) + Number(e.value)
         })
     })
 
@@ -131,6 +145,14 @@ if (JSON.parse(localStorage.getItem('cart'))) {
 
 
 
+
+}else{
+        // console.log();
+        // empty.classList.remove('hidden')
+        // counterTop.classList.add('hidden')
+        // counter.parentNode.innerText = 'Cesta'
+        // envioDiv.remove()
+   
 
 }
 
