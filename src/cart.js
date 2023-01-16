@@ -8,41 +8,56 @@ const inputEnvio = document.querySelectorAll('.envio')
 const counterTop = document.querySelector('#counterTop')
 const envioDiv = document.querySelector('#envioDiv')
 
-// quantity
-const change = (div,{quantity,price}) => {
-    counter.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc, e) => acc + e.quantity, 0)
+
+
+
+
+
+
+const change = (div, { quantity, price }, input) => {
+
     if (container.children.length <= 1 || cart.length < 0) {
         empty.classList.remove('hidden')
         counterTop.classList.add('hidden')
         counter.parentNode.innerText = 'Cesta'
         envioDiv.remove()
-   }
-    counterTop.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc, e) => acc + e.quantity, 0)
+    }
 
-    subtotal.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc,e) =>  acc + Number(e.price)*Number(e.quantity), 0)
-    total.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc,e) =>  acc + Number(e.price)*Number(e.quantity), 0)
 
-    div.children[1].innerText = `${quantity * price} ,00€`
+    let cantidadTotalCafes = cart.reduce((acc, e) => acc + e.quantity, 0)
+    counter.innerText = cantidadTotalCafes
+    counterTop.innerText = cantidadTotalCafes
+
+
+    let precioTotalCafes = cart.reduce((acc, e) => acc + Number(e.price) * Number(e.quantity), 0)
+    subtotal.innerText = precioTotalCafes
+    total.innerText = precioTotalCafes + input
+
+
+    if(div){
+        div.children[1].children[0].innerText = `${quantity * price}`
+    }
+
+
 }
 
 
-let cart;
-if (JSON.parse(localStorage.getItem('cart'))) {
-    empty.classList.add('hidden')
-    counterTop.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc, e) => acc + e.quantity, 0)
-    cart = JSON.parse(localStorage.getItem('cart'))
-    // let cartFiltered = cart.filter((e, i) =>
-    //     i === cart.findIndex((k) => (
-    //         e.name === k.name
-    //     ))
-    // )
-    // let cartFilteredLength = []
-    // cartFiltered.forEach(e => {
-    //     cartFilteredLength.push(cart.filter((x) => x.name === e.name).length);
-    // })
+let cart = JSON.parse(localStorage.getItem('cart'))
 
-    envio.innerText = '0,00€'
-    counter.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc, e) => acc + e.quantity, 0)
+
+if (cart) {
+    empty.classList.add('hidden')
+
+    let cantidadRealCafes = cart.reduce((acc, e) => acc + e.quantity, 0)
+
+    counterTop.innerText = cantidadRealCafes
+    counter.innerText = cantidadRealCafes
+
+    let InputEnvioValue = 0
+
+    let precioTotalCafes = cart.reduce((acc, e) => acc + Number(e.price) * Number(e.quantity), 0)
+    subtotal.innerText = precioTotalCafes
+    total.innerText = precioTotalCafes
 
     cart.forEach((element, i) => {
         const div = document.createElement('div')
@@ -60,101 +75,101 @@ if (JSON.parse(localStorage.getItem('cart'))) {
             <p class="text-sm">Paquete de café, 250gr</p>
         </div>
     </div>
-    <p class="font-semibold text-lg"><span>${Number(element.price) * element.quantity}</span>,00€</p>`
+    <p class="font-semibold text-lg"><span>${Number(element.price) * element.quantity}</span>€</p>`
+
+    div.classList.add('flex', 'justify-between', 'items-center', 'gap-6', 'border-b-1')
+    container.append(div)
 
 
-        // IMG MINUS
+
+        if(i !== cart.length-1){
+            const betweenLine = document.createElement('div')
+            betweenLine.classList.add('w-full', 'h-px', 'bg-grey' ,'opacity-10')
+            container.append(betweenLine)
+            
+        }
+        
+        
+        
+
+        // BOTON DE RESTA DE PRODUCTO
 
         div.children[0].children[0].children[0].addEventListener('click', () => {
-
-            // if(div.children[0].children[0].children[0].nextElementSibling.innerText != 0){
-            //     // cart.splice(cart.findIndex(e => e.name === element.name),1)
-            //     // localStorage.setItem('cart', JSON.stringify(cart))
-            //     // div.children[0].children[0].children[0].nextElementSibling.innerText--
-            // }
-
             element.quantity--
             div.children[0].children[0].children[1].innerText = element.quantity
             if (element.quantity == 0) {
-                cart.splice(cart.findIndex(e=> e.name === element.name),1)
-                div.remove()
-                localStorage.setItem('cart', JSON.stringify(cart))
 
-                // if (container.children.length <= 1 || cart.length < 0) {
-                //      empty.classList.remove('hidden')
-                //      counterTop.classList.add('hidden')
-                     
-                // }
-            } else {
-                // cart.splice(cart.findIndex(e => e.name === element.name),1)
-                // localStorage.setItem('cart', JSON.stringify(cart))
+                if(div.nextElementSibling){
+                    div.nextElementSibling.remove()
+                }
+
+                if(cart.length === 1 && div.previousElementSibling){
+                    div.previousElementSibling.remove()
+                }
+
                 
-                localStorage.setItem('cart', JSON.stringify(cart))
+                cart.splice(cart.findIndex(e => e.name === element.name), 1)
+                div.remove()
+
+                
+
             }
-            change(div,element)
-            
 
+            localStorage.setItem('cart', JSON.stringify(cart))
 
-
+            change(div, element, InputEnvioValue)
         })
 
-        // IMG MORE
+
+        // BOTO DE SUMA DE PRODUCTO
+
+
         div.children[0].children[0].children[2].addEventListener('click', () => {
             element.quantity++
             localStorage.setItem('cart', JSON.stringify(cart))
             div.children[0].children[0].children[2].previousElementSibling.innerText++
-            change(div,element)
+            change(div, element, InputEnvioValue)
         })
 
 
-        div.classList.add('flex', 'justify-between', 'items-center', 'gap-6')
-        container.append(div)
-        subtotal.innerText = Number(subtotal.innerText) + Number(element.price) * element.quantity
-        total.innerText = Number(total.innerText) + Number(element.price) * element.quantity
+
+
 
     });
 
+    
+
+
+    if (container.children.length <= 1 || cart.length < 0) {
+        empty.classList.remove('hidden')
+        counterTop.classList.add('hidden')
+        counter.parentNode.innerText = 'Cesta'
+        envioDiv.remove()
+    }
+
+
     inputEnvio.forEach(e => {
-        
-        e.addEventListener('click', (event) => {
-            envio.innerText = Number(e.value) + ',00€'
-            total.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc,e) =>  acc + Number(e.price)*Number(e.quantity), 0) + Number(e.value)
+        e.addEventListener('click', () => {
+
+            InputEnvioValue = Number(e.value)
+            envio.innerText = e.value + '€'
+            // total.innerText = precioTotalCafes + InputEnvioValue
+
+            change(false, false, InputEnvioValue)
+
         })
     })
 
 
-    // const moreLess = document.querySelectorAll('#moreLess > img')
-    // moreLess.forEach((e, i) => {
-    //     e.addEventListener('click', () => {
-    //         // MINUS
-    //         if (i === 0) {
-    //             e.nextElementSibling.innerText--
-    //             if (e.nextElementSibling.innerText == 0) {
-    //                 e.parentNode.parentNode.parentNode.remove()
-    //             }
 
-
-    //             // MORE
-    //         } else {
-
-    //         }
-    //     })
-    // })
-
-
-
-
-
-
-}else{
-        // console.log();
-        // empty.classList.remove('hidden')
-        // counterTop.classList.add('hidden')
-        // counter.parentNode.innerText = 'Cesta'
-        // envioDiv.remove()
-   
-
+} else {
+    empty.classList.remove('hidden')
+    counterTop.classList.add('hidden')
+    counter.parentNode.innerText = 'Cesta'
+    envioDiv.remove()
 }
+
+
 
 
 

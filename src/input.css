@@ -1,19 +1,21 @@
-*{
+* {
     font-family: 'Outfit', sans-serif;
 }
 
-.minus{
+.minus {
     width: 50px;
     height: 1px;
     background-color: black;
 
+
 }
 
-.img{
+.img {
     width: 24px;
     height: 24px;
 }
-.as{
+
+.as {
     padding: 0px 48px
 }
 

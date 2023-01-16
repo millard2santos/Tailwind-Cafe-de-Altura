@@ -6,11 +6,10 @@ if (JSON.parse(localStorage.getItem('cart'))) {
     cart = JSON.parse(localStorage.getItem('cart'))
     if(cart.length > 0){
         counterTop.classList.remove('hidden')
-        counterTop.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc,e) => acc + e.quantity,0)
+        counterTop.innerText = cart.reduce((acc,e) => acc + e.quantity,0)
     }
 } else {
     cart = []
-
 }
 coffes.forEach(elements => {
     const coffe = {
@@ -31,9 +30,7 @@ coffes.forEach(elements => {
             localStorage.setItem('cart', JSON.stringify(cart))
         }
 
-
-
-        counterTop.innerText = JSON.parse(localStorage.getItem('cart')).reduce((acc,e) => acc + e.quantity,0)
+        counterTop.innerText = cart.reduce((acc,e) => acc + e.quantity,0)
 
     })
 })

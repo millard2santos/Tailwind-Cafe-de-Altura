@@ -50,11 +50,11 @@
             </div>
         </a>
         <div class="nav-link flex justify-between gap-8">
-            <a class="font-semibold text-sm" href="/pages/store.html">Tienda</a>
-            <a class="font-semibold text-sm" href="">Suscripción</a>
-            <a class="font-semibold text-sm" href="">Para empresas</a>
-            <a class="font-semibold text-sm" href="">Sobre nosotros</a>
-            <a class="font-semibold text-sm" href="">Contacto</a>
+            <a class="font-semibold text-sm hover:outline hover:bg-grey outline-4 outline-grey  rounded" href="/pages/store.html">Tienda</a>
+            <a class="font-semibold text-sm hover:outline hover:bg-grey outline-4 outline-grey  rounded" href="">Suscripción</a>
+            <a class="font-semibold text-sm hover:outline hover:bg-grey outline-4 outline-grey  rounded" href="">Para empresas</a>
+            <a class="font-semibold text-sm hover:outline hover:bg-grey outline-4 outline-grey  rounded" href="">Sobre nosotros</a>
+            <a class="font-semibold text-sm hover:outline hover:bg-grey outline-4 outline-grey  rounded" href="">Contacto</a>
         </div>
         <div class="flex justify-evenly items-center gap-6">
             <div class="flex justify-evenly items-center gap-3">
@@ -66,14 +66,16 @@
         <a href="/pages/cart.html">
             <div class="flex items-center gap-2">
                 <img src="/assets/icons/bolsa.png" alt="" class="w-6 h-6">
-                <div id="counterTop" class="w-6 h-6 rounded-full flex justify-center items-center bg-grey text-xs hidden"></div>
+                <div id="counterTop"
+                    class="w-6 h-6 rounded-full flex justify-center items-center bg-grey text-xs hidden"></div>
             </div>
+
         </a>
     </nav>
     <!-- -----------NavBar------------- -->
     <!-- -----------Header------------- -->
-    <header class="flex gap-6 py-12 px-10 font-semibold">
-        <article class="head-article flex flex-col justify-center gap-4">
+    <header class="flex gap-6 py-12 px-10 font-semibold justify-center">
+        <article class="head-article flex flex-col justify-center gap-4 [text-shadow:_0px_3px_3px_rgba(0,0,0,0.25)]">
             <h3 class="text-lg text-green">De la planta a tu taza</h3>
             <h1 class="text-[40px]">El mejor café del mundo, ahora en tu casa.</h1>
             <p class="text-sm font-normal">Trabajamos con agricultores de todo el mundo para seleccionar los mejores
@@ -88,9 +90,9 @@
     </header>
     <!-- -----------Header------------- -->
     <!-- -----------Three Card------------- -->
-    <section class="three-card flex flex-col justify-center gap-6 p-12 bg-[url('/assets/other/background-coffe.jpg')]">
-        <h4 class="text-center font-medium text-2xl text-white">Café con las mejores condiciones</h4>
-        <div class="hold-cards flex gap-6 self-center">
+    <section class="three-card flex flex-col justify-center items-center gap-6 p-12">
+        <h4 class=" font-medium text-2xl text-white">Café con las mejores condiciones</h4>
+        <div class="hold-cards flex gap-6 ">
             <article
                 class="card w-[320px] h-[232px] flex flex-col justify-center items-center gap-4 p-6 shadow bg-white rounded-lg">
                 <img src="assets/icons/taskCard.png" alt="">
@@ -119,7 +121,7 @@
     <!-- -----------coffes------------- -->
     <section class="flex flex-col p-10 gap-10 justify-center " id="news">
         <h2 class="text-2xl font-medium text-green text-center">Novedades</h2>
-        <div class="flex justify-between items-center flex-wrap gap-6">
+        <div class="flex justify-center items-center flex-wrap gap-6">
             <article
                 class="coffe group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe">
                 <img src="assets/coffe/costaRicaBag.png" alt="">
@@ -169,7 +171,7 @@
     <!-- -----------coffes------------- -->
     <!-- -----------QA------------- -->
     <section class="qa bg-green py-12 px-[306px]">
-        <div class="hold-qa flex flex-col justify-center items-center gap-4 text-white">
+        <div class="flex flex-col justify-center items-center gap-4 text-white">
             <h2 class="font-semibold mb-8 text-2xl">Preguntas frecuentes</h2>
             <div class="qa-div flex flex-col justify-center gap-4 p-6 bg-white rounded-[10px] text-darkGrey w-full">
                 <div class="qa-div-click flex justify-between items-center">
@@ -210,7 +212,7 @@
     <!-- -----------QA------------- -->
     <!-- -----------Location------------- -->
     <section class="location py-11 px-10">
-        <div class="hold-location flex gap-3 justify-between">
+        <div class="hold-location flex gap-3 justify-center">
             <article class="location-article flex flex-col justify-center gap-4">
                 <h3 class="text-2xl font-medium text-green">Pruébalo en nuestra coffe shop</h3>
                 <p class="text-sm font-semibold">Visita nuestra cafetería en el centro de la ciudad para
@@ -229,7 +231,7 @@
     <!-- -----------Location------------- -->
     <!-- -----------FORM------------- -->
     <section class="form bg-taupe px-10">
-        <div class="hold-form flex justify-between gap-6">
+        <div class="hold-form flex justify-center gap-6">
             <article class="form-txt flex flex-col justify-center items-start gap-5 text-grey ">
                 <h4 class="text-black text-lg font-semibold">Entra en contacto con nosotros</h4>
                 <p>Si tienes dudas, ponte en contacto con nostros a través del formulario y te responderemos lo
@@ -271,9 +273,14 @@
                     </div>
                     <div class="form-actual-tlf flex flex-col gap-1">
                         <label class="text-xs text-grey" for="tlf">Teléfono</label>
-                        <div class="US flex border border-taupe rounded-md hover:border-greyHoverInput">
-                            <div class="US-actual p-3 flex justify-center items-center gap-2">US<img
-                                    src="/assets/icons/upArrow.png" alt=""></div>
+                        <div class="US flex border border-taupe rounded-md hover:border-greyHoverInput h-[34px]">
+
+                            <select name="" id="select" class="text-sm px-3 py-2.5 cursor-pointer">
+                                <option value="">US</option>
+                                <option value="">asd</option>
+                                <option value=""></option>
+                            </select>
+
 
                             <input class="outline-none border-none w-full" type="tel" id="tlf" name="Phone"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+1 (555) 987-6543">
@@ -301,24 +308,26 @@
     <!-- -----------FORM------------- -->
     <!-- -----------FOOTER------------- -->
     <footer class="flex flex-col bg-black text-white py-7 px-10">
-        <div class="footer-1 flex justify-start items-center gap-2 mb-2.5 text-white">
+        <div class="footer-1 flex  items-center gap-2 mb-2.5 text-white">
             <h2 class="text-2xl ">cafedealtura.com</h2>
             <img src="/assets/icons/cup.png" alt="cup" class="coffe-cup">
         </div>
-        <div class="flex mb-4 gap-[570px]">
-            <div class="">
+        <!-- <div class="flex mb-4 gap-[570px]"> -->
+        <div class="flex w-full ">
+            <div class="w-1/2">
                 <p id="size18" class="text-lg mb-5">Te ayudamos en</p>
                 <button class="flex items-center py-4 px-6 gap-2.5 bg-grey text-white rounded border-none mb-5">
                     <img src="assets/icons/wPhone.png" alt="">
                     +34 919 49 05 18
                 </button>
-                <button class="flex items-center py-4 px-6 gap-2.5 bg-grey text-white rounded border-none ">
+                <button class="flex items-center py-4 px-6 gap-2.5 bg-grey text-white rounded border-none mb-5">
                     <img src="assets/icons/whiteMail.png" alt="" id="mail-img">
                     hola@cafedealtura.com
                 </button>
             </div>
-            <div class="footer-link flex gap-[118px] justify-between">
-                <div class="footer-link-actual flex flex-col gap-4">
+
+            <div class="footer-link flex gap-[118px] w-1/2">
+                <div class="flex flex-col gap-4">
                     <a href="" class="font-semibold text-sm">Tienda</a>
                     <a href="" class="font-semibold text-sm">Suscripción</a>
                     <a href="" class="font-semibold text-sm">Para empresas</a>
@@ -326,12 +335,13 @@
                     <a href="" class="font-semibold text-sm">Contacto</a>
 
                 </div>
-                <div class="footer-link-actual flex flex-col gap-4">
-                    <a href="">Política de privacidad</a>
-                    <a href="">Política de cookies</a>
-                    <a href="">Términos y condiciones</a>
+                <div class="flex flex-col gap-4">
+                    <a href="" class="font-semibold text-sm">Política de privacidad</a>
+                    <a href="" class="font-semibold text-sm">Política de cookies</a>
+                    <a href="" class="font-semibold text-sm">Términos y condiciones</a>
                 </div>
             </div>
+        </div>
         </div>
     </footer>
     <section class="footer-last flex justify-center font-semibold bg-darkGrey py-3 text-white">
