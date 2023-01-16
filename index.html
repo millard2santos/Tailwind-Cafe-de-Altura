@@ -67,7 +67,7 @@
             <div class="flex items-center gap-2">
                 <img src="/assets/icons/bolsa.png" alt="" class="w-6 h-6">
                 <div id="counterTop"
-                    class="w-6 h-6 rounded-full flex justify-center items-center bg-grey text-xs hidden"></div>
+                    class="w-6 h-6 rounded-full justify-center flex items-center bg-grey text-xs hidden"></div>
             </div>
 
         </a>
@@ -123,7 +123,7 @@
         <h2 class="text-2xl font-medium text-green text-center">Novedades</h2>
         <div class="flex justify-center items-center flex-wrap gap-6">
             <article
-                class="coffe group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe">
+                class="coffe group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe transition-colors duration-500">
                 <img src="assets/coffe/costaRicaBag.png" alt="">
                 <div class="flex flex-col justify-center items-center gap-3 font-semibold text-sm">
                     <p>Costa Rica Tarrazú</p>
@@ -133,7 +133,7 @@
                     class=" p-2 font-semibold rounded bg-green opacity-70 group-hover:opacity-100 text-sm text-white">Añadir</button>
             </article>
             <article
-                class="coffe group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe">
+                class="coffe group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe transition-colors duration-500">
                 <img src="assets/coffe/colombiaBag.png" alt="">
                 <div class="flex flex-col justify-center items-center gap-3 font-semibold text-sm">
                     <p>Colombia Los Naranjos</p>
@@ -143,7 +143,7 @@
                     class=" p-2 font-semibold rounded bg-green opacity-70 group-hover:opacity-100 text-sm text-white">Añadir</button>
             </article>
             <article
-                class="coffe group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe">
+                class="coffe group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe transition-colors duration-500">
                 <img src="assets/coffe/laosBag.png" alt="">
                 <div class="flex flex-col justify-center items-center gap-3 font-semibold text-sm">
                     <p>Laos Amanecer</p>
@@ -153,7 +153,7 @@
                     class=" p-2 font-semibold rounded bg-green opacity-70 group-hover:opacity-100 text-sm text-white">Añadir</button>
             </article>
             <article
-                class="coffe group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe">
+                class="coffe group flex flex-col items-center gap-6 p-6 border border-taupe rounded-lg shadow-md hover:bg-taupe transition-colors duration-500">
                 <img src="assets/coffe/etiopiaBag.png" alt="">
                 <div class="flex flex-col justify-center items-center gap-3 font-semibold text-sm">
                     <p>Etiopía Yrgacheff</p>
@@ -176,7 +176,7 @@
             <div class="qa-div flex flex-col justify-center gap-4 p-6 bg-white rounded-[10px] text-darkGrey w-full">
                 <div class="qa-div-click flex justify-between items-center">
                     <p class="text-lg font-semibold">¿Cómo hago el pedido?</p>
-                    <img src="/assets/icons/upArrow.png" alt="">
+                    <img src="/assets/icons/upArrow.png" alt="" class="">
                 </div>
                 <div class="w-full h-px bg-grey opacity-30"></div>
                 <p class="text-xs">Selecciona el café que desees probar y completa el proceso de compra. Si lo
@@ -187,7 +187,7 @@
             <div class="qa-div flex flex-col justify-center gap-4 p-6 bg-white rounded-[10px] text-darkGrey w-full">
                 <div class="qa-div-click flex justify-between items-center">
                     <p class="text-lg font-semibold">¿Por qué los precios son tan bajos?</p>
-                    <img src="/assets/icons/upArrow.png" alt="">
+                    <img src="/assets/icons/upArrow.png" alt="" class="">
                 </div>
                 <div class="w-full h-px bg-grey opacity-30"></div>
                 <p class="text-xs">Viajamos constantemente para encontrar los mejores granos y a los agricultores más
@@ -215,7 +215,7 @@
         <div class="hold-location flex gap-3 justify-center">
             <article class="location-article flex flex-col justify-center gap-4">
                 <h3 class="text-2xl font-medium text-green">Pruébalo en nuestra coffe shop</h3>
-                <p class="text-sm font-semibold">Visita nuestra cafetería en el centro de la ciudad para
+                <p class="text-sm">Visita nuestra cafetería en el centro de la ciudad para
                     probar los granos de café antes de hacer
                     tu pedido y llevate un descuento.</p>
                 <div class="location-last flex justify-center items-center self-start gap-5 mt-1">
@@ -234,10 +234,10 @@
         <div class="hold-form flex justify-center gap-6">
             <article class="form-txt flex flex-col justify-center items-start gap-5 text-grey ">
                 <h4 class="text-black text-lg font-semibold">Entra en contacto con nosotros</h4>
-                <p>Si tienes dudas, ponte en contacto con nostros a través del formulario y te responderemos lo
+                <p >Si tienes dudas, ponte en contacto con nostros a través del formulario y te responderemos lo
                     antes
                     posible</p>
-                <p class="mt-5 mb-3">También puedes ponerte en contacto con nosotros en nuestra dirección o a través del
+                <p class="mt-5 mb-3 ">También puedes ponerte en contacto con nosotros en nuestra dirección o a través del
                     teléfono de la
                     tienda</p>
                 <div class="form-txt-address flex flex-col gap-0 mb-2">
@@ -271,18 +271,18 @@
                             class="w-[470px] py-2 px-4 shadow-sm rounded-md border border-taupe hover:border-greyHoverInput focus:outline-greenFocusInput"
                             required>
                     </div>
-                    <div class="form-actual-tlf flex flex-col gap-1">
+                    <div class="flex flex-col gap-1 ">
                         <label class="text-xs text-grey" for="tlf">Teléfono</label>
-                        <div class="US flex border border-taupe rounded-md hover:border-greyHoverInput h-[34px]">
+                        <div class="flex border border-taupe shadow-sm rounded-md hover:border-greyHoverInput focusPoint outline outline-1 outline-white ">
 
-                            <select name="" id="select" class="text-sm px-3 py-2.5 cursor-pointer">
+                            <select name="" id="select" class="text-sm px-2 rounded-md py-3 cursor-pointer">
                                 <option value="">US</option>
-                                <option value="">asd</option>
-                                <option value=""></option>
+                                <option value="">ES</option>
+                                <option value="">FR</option>
                             </select>
 
 
-                            <input class="outline-none border-none w-full" type="tel" id="tlf" name="Phone"
+                            <input class="outline-none border-none w-full rounded-md" type="tel" id="tlf" name="Phone"
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+1 (555) 987-6543">
                         </div>
                     </div>

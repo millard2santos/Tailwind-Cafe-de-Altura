@@ -6,6 +6,7 @@ if (JSON.parse(localStorage.getItem('cart'))) {
     cart = JSON.parse(localStorage.getItem('cart'))
     if(cart.length > 0){
         counterTop.classList.remove('hidden')
+        counterTop.classList.add('flex')
         counterTop.innerText = cart.reduce((acc,e) => acc + e.quantity,0)
     }
 } else {

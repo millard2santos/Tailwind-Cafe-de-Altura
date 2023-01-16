@@ -28,3 +28,7 @@
     background-size: cover;
     background-position: center center;
 }
+
+.separador:last-child{
+    display: none;
+}
